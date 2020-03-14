@@ -20,14 +20,12 @@
 					<h1><a href="#">The Sounds of Human Impact on Birds in New Jersey</a></h1>
 					<ul class="actions">
 						<li><a onclick="switchSounds1970();playNineteenSeventy()" class="button primary icon solid fa-calendar-plus">1970</a></li>
+						<li><a onclick="switchSounds1970();reset()" class="button primary icon solid fa-calendar-plus">Reset</a></li>
 						<li><a onclick="switchSounds2020();playTwentyTwenty()" class="button primary icon solid fa-calendar-minus">2020</a></li>
 					</ul>
 				</div>
 				<div class="image"><div class="inner"><img src="https://www.funnewjersey.com/uploads/fm/nj-facts-and-symbols.png" alt="" /></div></div>
-			<audio id="myAudio">
-  				<source src="sounds/goldfinch.mp3" type="audio/mpeg">
-  				Your browser does not support the audio element.
-</audio>
+			
 			</header>
 <!-- Footer -->
 			<footer id="footer">
@@ -51,9 +49,31 @@
 </html>
 
 <script>
-var goldfinch = new Audio('sounds/goldfinch.mp3')
-var cardinal = new Audio('sounds/cardinal.mp3')
-var morningDove = new Audio('sounds/morningDove.mp3')
+var goldfinchSong1 = new Audio('sounds/goldfinchSong1.mp3')
+var goldfinchSong2 = new Audio('sounds/goldfinchSong2.mp3')
+var goldfinchSong3 = new Audio('sounds/goldfinchSong3.mp3')
+
+var goldfinchAlarm1 = new Audio('sounds/goldfinchAlarm1.mp3')
+
+
+var cardinalSong1 = new Audio('sounds/cardinalSong1.mp3')
+var cardinalSong2 = new Audio('sounds/cardinalSong2.mp3')
+var cardinalSong3 = new Audio('sounds/cardinalSong3.mp3')
+
+var cardinalAlarm1 = new Audio('sounds/cardinalAlarm1.mp3')
+
+
+var mourningDoveSong1 = new Audio('sounds/mourningDoveSong1.mp3')
+
+var mourningDoveAlarm1 = new Audio('sounds/mourningDoveAlarm1.mp3')
+
+var robinSong1 = new Audio('sounds/robinSong1.mp3')
+var robinSong2 = new Audio('sounds/robinSong2.mp3')
+var robinSong3 = new Audio('sounds/robinSong3.mp3')
+
+var robinAlarm1 = new Audio('sounds/robinAlarm1.mp3')
+
+
 let nineteenSeventy = true; 
 
 
@@ -67,36 +87,116 @@ function switchSounds2020() {
 
 function playNineteenSeventy(){
 if (nineteenSeventy == true) {
-  goldfinch.pause() 
-  goldfinch.currentTime = 0;
+  goldfinchSong1.pause() 
+  goldfinchSong1.currentTime = 0;
+  goldfinchSong2.pause() 
+  goldfinchSong2.currentTime = 0;
+  goldfinchSong3.pause() 
+  goldfinchSong3.currentTime = 0;
   
-  cardinal.pause() 
-  cardinal.currentTime = 0;
+  goldfinchAlarm1.pause() 
+  goldfinchAlarm1.currentTime = 0;
   
-  morningDove.pause() 
-  morningDove.currentTime = 0;
   
-  setTimeout(goldfinch.play(), Math.random() * 5000)
+  cardinalSong1.pause() 
+  cardinalSong1.currentTime = 0;
+  cardinalSong2.pause() 
+  cardinalSong2.currentTime = 0;
+  cardinalSong3.pause() 
+  cardinalSong3.currentTime = 0;
   
-  setTimeout(cardinal.play(), Math.random() * 5000)
+  cardinalAlarm1.pause() 
+  cardinalAlarm1.currentTime = 0;
   
-  setTimeout(morningDove.play(), Math.random() * 5000)
+  
+  mourningDoveSong1.pause() 
+  mourningDoveSong1.currentTime = 0;
+  
+  mourningDoveAlarm1.pause() 
+  mourningDoveAlarm1.currentTime = 0;
+  
+  
+  robinSong1.pause() 
+  robinSong1.currentTime = 0;
+  robinSong2.pause() 
+  robinSong2.currentTime = 0;
+  robinSong3.pause() 
+  robinSong3.currentTime = 0;
+  
+  robinAlarm1.pause() 
+  robinAlarm1.currentTime = 0;
+
+  
+  setTimeout(goldfinchSong1.play(), Math.random() * 10000)
+  setTimeout(goldfinchSong2.play(), Math.random() * 20000)
+  setTimeout(goldfinchSong3.play(), Math.random() * 30000)
+  
+  setTimeout(cardinalSong1.play(), Math.random() * 10000)
+  setTimeout(cardinalSong2.play(), Math.random() * 20000)
+  setTimeout(cardinalSong3.play(), Math.random() * 30000)
+  
+  setTimeout(mourningDoveSong1.play(), Math.random() * 15000)
+  
+  setTimeout(robinSong1.play(), Math.random() * 10000)
+  setTimeout(robinSong2.play(), Math.random() * 20000)
+  setTimeout(robinSong3.play(), Math.random() * 30000)
+
+
 
 }
+}
+
+function reset(){
+location.reload();
 }
 
 function playTwentyTwenty(){
 if (nineteenSeventy == false) {
-  	goldfinch.pause() 
-  	goldfinch.currentTime = 0;
+  goldfinchSong1.pause() 
+  goldfinchSong1.currentTime = 0;
+  goldfinchSong2.pause() 
+  goldfinchSong2.currentTime = 0;
+  goldfinchSong3.pause() 
+  goldfinchSong3.currentTime = 0;
   
-  	cardinal.pause() 
-  	cardinal.currentTime = 0;	
+  goldfinchAlarm1.pause() 
+  goldfinchAlarm1.currentTime = 0;
+  
+  
+  cardinalSong1.pause() 
+  cardinalSong1.currentTime = 0;
+  cardinalSong2.pause() 
+  cardinalSong2.currentTime = 0;
+  cardinalSong3.pause() 
+  cardinalSong3.currentTime = 0;
+  
+  cardinalAlarm1.pause() 
+  cardinalAlarm1.currentTime = 0;
+  
+  
+  mourningDoveSong1.pause() 
+  mourningDoveSong1.currentTime = 0;
+  
+  mourningDoveAlarm1.pause() 
+  mourningDoveAlarm1.currentTime = 0;
+  
+  
+  robinSong1.pause() 
+  robinSong1.currentTime = 0;
+  robinSong2.pause() 
+  robinSong2.currentTime = 0;
+  robinSong3.pause() 
+  robinSong3.currentTime = 0;
+  
+  robinAlarm1.pause() 
+  robinAlarm1.currentTime = 0;
+
   	
-  	morningDove.pause() 
-  	morningDove.currentTime = 0;
-  	
-  	setTimeout(morningDove.play(), Math.random() * 5000)
+  	setTimeout(goldfinchAlarm1.play(), Math.random() * 15000)
+  	setTimeout(cardinalAlarm1.play(), Math.random() * 15000)
+  	setTimeout(mourningDoveAlarm1.play(), Math.random() * 15000)
+	setTimeout(robinAlarm3.play(), Math.random() * 15000)
+
 
 }
 
